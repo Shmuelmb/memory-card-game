@@ -155,3 +155,10 @@ button:hover {
 	text-decoration: none;
 	cursor: pointer;
 }
+
+
+.modal{
+	position: absolute;
+	z-index: 1;
+	display: none;
+}
