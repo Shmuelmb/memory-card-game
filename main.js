@@ -19,8 +19,8 @@ const cardsArray = [
   "&#129313;",
   "&#129313;",
 ];
-
-shuffleArray(cardsArray); // shuffle all emoji's
+let int = null;
+// shuffleArray(cardsArray); // shuffle all emoji's
 const inner = document.querySelectorAll(".inner");
 const backs = document.querySelectorAll(".back ");
 const modal = document.querySelector(".modal");
@@ -69,7 +69,30 @@ inner.forEach((event) => {
     } else if (winner.length === 5) {
       setTimeout(() => {
         modal.style.display = "flex";
+        document.querySelector("h2").innerText = `TIME: ${stoper.innerHTML} `;
+        clearInterval(myInterval);
       }, 2000);
     }
   });
 });
+
+let [seconds, minutes, hours] = [0, 0, 0];
+let stoper = document.querySelector(".stoper");
+function displayTimer() {
+  seconds += 1;
+  if (seconds == 60) {
+    seconds = 0;
+    minutes++;
+
+    if (minutes == 60) {
+      minutes = 0;
+      hours++;
+    }
+  }
+
+  let h = hours < 10 ? "0" + hours : hours;
+  let m = minutes < 10 ? "0" + minutes : minutes;
+  let s = seconds < 10 ? "0" + seconds : seconds;
+  stoper.innerHTML = ` ${h} : ${m} : ${s} `;
+}
+const myInterval = setInterval(displayTimer, 1000);
