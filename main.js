@@ -20,7 +20,7 @@ const cardsArray = [
   "&#129313;",
 ];
 let int = null;
-// shuffleArray(cardsArray); // shuffle all emoji's
+shuffleArray(cardsArray); // shuffle all emoji's
 const inner = document.querySelectorAll(".inner");
 const backs = document.querySelectorAll(".back ");
 const modal = document.querySelector(".modal");
