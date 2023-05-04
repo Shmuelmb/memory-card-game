@@ -1,14 +1,3 @@
-header,
-header a {
-  font-size: 1.5em;
-  margin: auto;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -16,6 +5,7 @@ body {
   align-items: center;
   margin: 0;
   width: 100%;
+  height: 100vh;
   background-color: #333;
 }
 
@@ -63,6 +53,7 @@ button:hover {
 }
 
 header {
+  font-size: 1.5em;
   text-align: center;
   height: 10vh;
 }
@@ -71,7 +62,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 75vh;
   width: 70%;
   gap: 10px;
 }
@@ -169,18 +160,14 @@ header {
   cursor: pointer;
 }
 .stoper {
+  height: 10vh;
   font-size: 2rem;
 }
-
+#confetti-canvas {
+  position: absolute;
+}
 @media screen and (max-width: 900px) {
-  .card {
-    height: 25%;
-    width: 30%;
-    cursor: pointer;
-  }
   .container {
-    height: 50vh;
-    width: 90%;
-    gap: 10px;
+    width: 100%;
   }
 }

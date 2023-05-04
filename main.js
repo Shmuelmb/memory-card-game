@@ -20,7 +20,7 @@ const cardsArray = [
   "&#129313;",
 ];
 let int = null;
-shuffleArray(cardsArray); // shuffle all emoji's
+// shuffleArray(cardsArray); // shuffle all emoji's
 const inner = document.querySelectorAll(".inner");
 const backs = document.querySelectorAll(".back ");
 const modal = document.querySelector(".modal");
@@ -71,6 +71,7 @@ inner.forEach((event) => {
         modal.style.display = "flex";
         document.querySelector("h2").innerText = `TIME: ${stoper.innerHTML} `;
         clearInterval(myInterval);
+        startConfetti();
       }, 2000);
     }
   });
